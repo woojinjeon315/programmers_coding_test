@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+int solution(int num) {
+    int answer = 0;
+    
+    for (int turn = 1; turn <= 500; turn ++) {
+        if (num % 2 == 0) {
+            num = num / 2;
+        }
+        else {
+            num = (num * 3) + 1;
+        }
+        if (num == 1) {
+            answer = turn;
+            break;
+        }
+        if (turn == 500) {
+            answer = -1;
+            break;
+        }
+    }
+    return answer;
+}
