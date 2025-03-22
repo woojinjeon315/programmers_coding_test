@@ -1,0 +1,6 @@
+def solution(participant, completion):
+    answer = participant
+    for i in completion:
+        answer.remove(i)
+        
+    return answer[0]
